@@ -184,7 +184,7 @@ def ver_imagem():
     treev_dados = tree.focus()
     treev_dicionario = tree.item(treev_dados)
     treev_lista = treev_dicionario['values']
-    valor = treev_lista[0]  #Pegar o id
+    valor = [int(treev_lista[0])]  #Pegar o id
 
     item = ver_item(valor) 
 
@@ -194,8 +194,8 @@ def ver_imagem():
     imagem = imagem.resize((170, 170))
     imagem = ImageTk.PhotoImage(imagem)
 
-    l_imagem = Label(frameMeio, image= imagem)
-    l_imagem.place(X=700, y=10)
+    l_imagem = Label(frameMeio, image = imagem, bg = co1, fg = co4)
+    l_imagem.place(x=700, y=10)
 
 
 def escolher_imagem():
